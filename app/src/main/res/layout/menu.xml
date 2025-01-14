@@ -1,0 +1,68 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cielo">
+
+    <!-- Encabezado con logos a los lados del título -->
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <!-- Logo izquierdo -->
+        <ImageView
+            android:id="@+id/headerIconLeft"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/sol" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/screenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/menu2"
+            android:textColor="@color/title_color"
+            android:textSize="30sp"
+            android:shadowColor="@color/title_glow"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="5" />
+
+        <!-- Logo derecho -->
+        <ImageView
+            android:id="@+id/headerIconRight"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/sol" />
+    </RelativeLayout>
+
+    <!-- Lista de opciones -->
+    <ListView
+        android:id="@+id/ListView_Menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RelativeLayoutHeader"
+        android:divider="@drawable/divider"
+        android:dividerHeight="2dp"
+        android:listSelector="@drawable/selector"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Imagen inferior -->
+    <ImageView
+        android:id="@+id/footerImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/tierra"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true" />
+</RelativeLayout>
